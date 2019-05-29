@@ -4,11 +4,11 @@
     <head>
         <title>DogFetch</title>
         <link rel="stylesheet" href="includes/style.css">
-        <mata charset= "UTF-8"></mata>
+        <meta charset= "UTF-8">
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
-
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -40,12 +40,13 @@
                     <h4>ערב טוב שרון</h4>
                 </div>
                     
-                <div class="Logo">
+                <div class="Logo"><a href="index.html">
                     <span class='fas fa-paw paw1'></span>
                     <h1 class="Hdog">Dog </h1>
                     <span id="logoIMG"></span> 
                     <h1 class="Hfetch"> Fetch</h1> 
                     <span class='fas fa-paw paw2'></span>    
+                </a>
                 </div>
             </section>
                     
@@ -71,25 +72,20 @@
         <main>
             <div class="container">
                 <div class="col-xs-20 col-md-10 col-md-offset-3 col-xs-offset-3">
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" role="form" action="confirm.php" method="GET">
                         <fieldset>
                         <div class="form-row">
                             <div class="form-group  col-xs-10 col-md-7">
                                 <label >שם</label>
-                                <input type="text" class="form-control" name="name" value="" placeholder="שם" required pattern="[A-Za-z]">
+                                <input type="text" class="form-control" name="name" value="" placeholder="שם" required pattern="[a-z]{1-20)">
                             </div>
                         </div>
                     </fieldset>
                             <fieldset>
                         <div class="form-group col-xs-5 col-md-3">
                             <label>גזע</label>
-                            <select class="form-control" name="breed" value="">
+                            <select class="form-control" id="breed" name="breed" value="">
                                 <option>בחר גזע</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
                             </select>
                         </div>
                         <div class="form-group  col-xs-2 col-md-2"></div>
@@ -97,7 +93,7 @@
                                 <div class="form-group  col-xs-5 col-md-3">
                                     
                                     <label > גיל</label>
-                                    <input type="text" class="form-control" name="age" value="" placeholder="גיל" pattern="[0-9]">
+                                    <input type="text" class="form-control" name="age" value="" placeholder="גיל" pattern="[0-9]{1-2}">
                                 </div>
                             </div>
                     </fieldset>
@@ -105,7 +101,7 @@
                         <div class="form-row">
                             <div class="form-group  col-xs-3 col-md-2">        
                                 <label >גובה</label>
-                                <input type="text" class="form-control" name="height" value="" placeholder="גובה"  pattern="[0-9]">
+                                <input type="text" class="form-control" name="height" value="" placeholder="גובה"  pattern="[0-9]{1-3}">
                             </div>
                         </div>
 
@@ -114,7 +110,7 @@
                         <div class="form-row">
                             <div class="form-group  col-xs-3 col-md-2">
                                 <label >משקל</label>
-                                <input type="text" class="form-control" name="weight" value="" placeholder="משקל"  pattern="[0-9]">
+                                <input type="text" class="form-control" name="weight" value="" placeholder="משקל"  pattern="[0-9]{1-3}">
                             </div>
                         </div>
 
@@ -124,7 +120,7 @@
                             <div class="form-group  col-xs-6 col-md-2">
                                 <label class="radio">מין</label>        
                                 <label class="radio-inline">
-                                    <input type="radio" name="gender" id="inlineRadio1" value="male"> זכר
+                                    <input type="radio" name="gender" id="inlineRadio1" value="male" > זכר
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="gender" id="inlineRadio2" value="female"> נקבה
@@ -137,12 +133,12 @@
                         <div class="form-row">
                             <div class="form-group  col-xs-10 col-md-7">
                                 <label >מספר צ'יפ</label>
-                                <input type="text" class="form-control" name="chipId" value="" placeholder="שם" required pattern="[0-9]" minlength="15" maxlength="15" required>
+                                <input type="text" class="form-control" name="chipId" value="" placeholder="שם" required pattern="[0-9]{15}" minlength="15" maxlength="15" required>
                             </div>
                         </div>
                         <div class="form-group  col-xs-10 col-md-7">
                             <label >תמונות</label>
-                            <input type="file" class="form-control" id="input" name="pics" value="" placeholder="" multiple accept="image/*">
+                            <input type="file" class="form-control" id="input" name="pics" value="" placeholder="" multiple accept="image/*" >
                         </div>
                         
                     </fieldset>
@@ -165,7 +161,7 @@
                 <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
             </div>
         </footer>
-
+        <script src="includes/addToList.js"></script>
         <script src="./includes/script.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
